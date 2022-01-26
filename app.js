@@ -35,11 +35,13 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     const places=data.places;
+    console.log(places);
 
 places.forEach(place => {
     const {infected,name}=place;
-   new mapboxgl.Marker({
-        draggable: true,
+    console.log("I'm"+infected)
+   const marker = new mapboxgl.Marker({
+        draggable: false,
         color:getColorFromInfeCount(infected)
         })
         .setLngLat([place.longitude,place.latitude])
