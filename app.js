@@ -30,7 +30,7 @@ mapboxgl.accessToken = mapBoxToken;
  }
 
 fetch(
-  "/get-latest.json"
+  "./get-latest.json"
 )
   .then((response) => response.json())
   .then((data) => {
