@@ -30,7 +30,12 @@ mapboxgl.accessToken = mapBoxToken;
  }
 
 fetch(
-  "./get-latest.json"
+  "./get-latest.json",{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+         }
 )
   .then((response) => response.json())
   .then((data) => {
